@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import { Inter } from 'next/font/google'
 import MenuIcon from '@mui/icons-material/Menu';
 import ButtonAppBar from '@/components/Nav';
+import {Head} from 'next/document';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,12 +18,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-        crossorigin="anonymous"
-      />
+      {/* <Head> */}
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+          crossOrigin="anonymous"
+        />
+      </head>
+      {/* </Head> */}
       <body>
         <ButtonAppBar/>
 
